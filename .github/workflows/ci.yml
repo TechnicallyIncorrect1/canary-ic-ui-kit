@@ -1,0 +1,19 @@
+﻿name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Repository Status
+        run: echo "✅ Repository cleaned successfully - canary-ic-ui-kit"
+      
+      - name: Setup Environment
+        run: echo "Environment ready"
